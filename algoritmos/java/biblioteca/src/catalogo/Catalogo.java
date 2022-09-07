@@ -1,5 +1,7 @@
 package catalogo;
 
+import java.util.Arrays;
+
 import datos.Libro;
 
 /**
@@ -45,13 +47,12 @@ public class Catalogo {
 		nroLibros = 0;
 	}
 	
-	
 	/**
 	* Retorna {@code true} si este {@code Catalogo} no tiene más capacidad para almacenar libros.
 	* @return {@code true} sii no hay capacidad disponible.
 	*/
 	public boolean estaLleno() {
-		throw new UnsupportedOperationException("Debe implementar este método");
+		return (nroLibros == CAPACIDAD_POR_DEFECTO);
 	}
 	
 	/**
@@ -61,7 +62,13 @@ public class Catalogo {
 	* @see #estaLleno()
 	*/
 	public boolean agregarLibro(Libro libro) {
-		throw new UnsupportedOperationException("Debe implementar este método (el Libro debe ser agregado al final)");
+		if(estaLleno()){
+			return false;
+		} else {
+			libros[nroLibros] = libro;
+			nroLibros ++;
+			return true;
+		}
 	}
 	
 	/**
@@ -75,8 +82,5 @@ public class Catalogo {
 	
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException("Debe implementar este método (debe usar el método toString() de Libro)");
-	}
-	
-
+		return "";
 }

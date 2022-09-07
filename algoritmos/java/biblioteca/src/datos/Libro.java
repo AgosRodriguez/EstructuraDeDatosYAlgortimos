@@ -89,7 +89,8 @@ public class Libro {
 	
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException("Debe implementar este método");
+		//throw new UnsupportedOperationException("Debe implementar este método");
+		return "Libro{\n\ttitulo: " + titulo + "\n\tautor: " + autor + "\n\tpaginas: " + "\n}";
 	}
 	
 	@Override
@@ -111,5 +112,4 @@ public class Libro {
 			return false;
 		return otroLibro.nroPaginas == nroPaginas;
 	}
-
 }

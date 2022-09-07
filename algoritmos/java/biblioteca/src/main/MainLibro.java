@@ -19,11 +19,17 @@ public class MainLibro {
 		Libro libro1 = new Libro("Isaac Asimov", "The Caves of Steel", 42);
 		Libro libro2 = new Libro("Isaac Asimov", "The Caves of Steel", 42);
 		Libro libro3 = new Libro("Isaac Asimov", "The Naked Sun", 47);
-		System.out.println(libro1 + " y " + libro2 + "\nSon iguales usando equals? " + (libro1.equals(libro2)));
-		System.out.println(libro1 + " y " + libro2 + "\nSon iguales usando ==? " + (libro1 == libro2));
-		System.out.println(libro1 + " y " + libro3 + "\nSon iguales usando equals? " + (libro1.equals(libro3)));
-		System.out.println(libro1 + " y " + libro3 + "\nSon iguales usando ==? " + (libro1 == libro3));
-		//TODO: realice más pruebas
-	} 
+		System.out.println(libro1 + " \ny " + libro2 + "\nSon iguales usando equals? " + (libro1.equals(libro2)));
+		System.out.println(libro1 + " \ny " + libro2 + "\nSon iguales usando ==? " + (libro1 == libro2));
+		System.out.println(libro1 + " \ny " + libro3 + "\nSon iguales usando equals? " + (libro1.equals(libro3)));
+		System.out.println(libro1 + " \ny " + libro3 + "\nSon iguales usando ==? " + (libro1 == libro3));
+		Libro libro4 = new Libro(null, null, 0);
+		System.out.println(libro4);
+		Libro libro5 = null;
+		System.out.println("\n\nCondicion ?? :" + (null == libro5)); // --> True
+		Libro libro8 = new Libro(null, "Griego", 0);
+		System.out.println("Libro 5: " + libro5);
+		System.out.println("Libro 8: " + libro8);
+ 	} 
 
 }
