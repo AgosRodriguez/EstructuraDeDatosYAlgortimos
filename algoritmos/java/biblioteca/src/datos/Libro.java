@@ -27,6 +27,7 @@ public class Libro {
 	private int nroPaginas;
 	
 	
+	//CONSTRUCTOR
 	/**
 	* Construye un nuevo {@code Libro} con autor, título, y número de páginas dados.
 	* @param autor : el autor del nuevo Libro.
@@ -39,6 +40,8 @@ public class Libro {
 		this.nroPaginas = nroPaginas;
 	}
 	
+	// GETTER AND SETTER
+
 	/**
 	* Define el autor de este Libro.
 	* @param autor : el nuevo autor de este Libro.
@@ -60,14 +63,14 @@ public class Libro {
 	* @param titulo : el nuevo título de este Libro.
 	*/
 	public void titulo(String titulo) {
-		this.autor = titulo;
+		this.titulo = titulo;
 	}
 	
 	/**
 	* Retorna el título asociado a este Libro.
 	* @return el título.
 	*/
-	public String titulo() {
+	public String getTitulo() {
 		return titulo;
 	}
 	
@@ -89,8 +92,7 @@ public class Libro {
 	
 	@Override
 	public String toString() {
-		//throw new UnsupportedOperationException("Debe implementar este método");
-		return "Libro{\n\ttitulo: " + titulo + "\n\tautor: " + autor + "\n\tpaginas: " + "\n}";
+		return "Libro{\n\t\ttitulo: " + titulo + "\n\t\tautor: " + autor + "\n\t\tpaginas: " + "\n\t}";
 	}
 	
 	@Override
