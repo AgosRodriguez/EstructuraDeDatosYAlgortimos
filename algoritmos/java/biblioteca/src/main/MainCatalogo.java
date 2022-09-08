@@ -19,14 +19,29 @@ public class MainCatalogo {
 	public static void main(String[] args) {
 		Libro libro1 = new Libro("Isaac Asimov", "The Caves of Steel", 42);
 		Libro libro2 = new Libro("Isaac Asimov", "The Naked Sun", 47);
-		//TODO: agregue más libros
+		
+		//Capacidad del array para agregar libros
+		
 		Catalogo catalogo = new Catalogo(10);
+		
 		boolean fun = catalogo.estaLleno();
+		
 		System.out.println(fun);
+
+		//Probando el metodo agregarLibro.
 		boolean fun2 = catalogo.agregarLibro(libro1);
 		System.out.println(fun2);
-		//TODO: pruebe los métodos agregarLibro y buscarPorTitulo
-		System.out.println("Catalogo:\n" + catalogo);
+		catalogo.agregarLibro(libro2);
+
+		//Probando metodo que busca un libro por el titulo
+	
+
+		Libro libro3;
+		libro3 = catalogo.buscarPorTitulo("The Naked Sun");
+		System.out.println(libro3);
+
+		//Imprimir todos los libros que se encuentran en el array.
+		System.out.println("Catalogo:\n" + "\t" + catalogo);
 	} 
 
 }
