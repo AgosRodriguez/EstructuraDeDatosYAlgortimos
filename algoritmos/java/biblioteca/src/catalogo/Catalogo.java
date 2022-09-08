@@ -31,6 +31,8 @@ public class Catalogo {
 	//la cantidad actual de libros almacenados.
 	private int nroLibros;
 	
+	// CONSTRUCTORES
+
 	/**
 	* Construye un nuevo {@code Catalogo} usando una capacidad de {@value #CAPACIDAD_POR_DEFECTO}.
 	*/
@@ -47,12 +49,15 @@ public class Catalogo {
 		nroLibros = 0;
 	}
 	
+	// GETTER AND SETTER
+
+
 	/**
 	* Retorna {@code true} si este {@code Catalogo} no tiene más capacidad para almacenar libros.
 	* @return {@code true} sii no hay capacidad disponible.
 	*/
 	public boolean estaLleno() {
-		return (nroLibros == CAPACIDAD_POR_DEFECTO);
+		return (nroLibros == libros.length);
 	}
 	
 	/**
@@ -77,10 +82,22 @@ public class Catalogo {
 	* @return un libro {@code l} que pertenece a este {@code Catalogo} sii {@code l.titulo().equals(titulo)}, {@code null} en caso contrario.
 	*/
 	public Libro buscarPorTitulo(String titulo) {
-		throw new UnsupportedOperationException("Debe implementar este método");
+		int i = 0;
+		while(i < nroLibros){
+			if(titulo.equals(libros[i].getTitulo())){
+				return libros[i];
+			}			
+			i++;
+		}
+		return null;
 	}
 	
 	@Override
 	public String toString() {
-		return "";
+		String librosSon = "";
+		for(int j=0; j < nroLibros; j++ ){
+			librosSon += libros[j];	
+		}
+		return librosSon;
+	}
 }
